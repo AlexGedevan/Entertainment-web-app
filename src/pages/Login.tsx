@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export default function Login() {
-  return <StyledLogin></StyledLogin>;
+  return <StyledLogin>123</StyledLogin>;
 }
 
-const StyledLogin = styled.div``;
+const StyledLogin = styled.div`
+  margin-top: 4.8rem;
+`;
