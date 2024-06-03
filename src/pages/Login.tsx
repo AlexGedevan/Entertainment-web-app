@@ -1,5 +1,3 @@
-import { useState } from "react";
-import Tesli from "../Tesli";
 import styled from "styled-components";
 
 export default function Login() {
