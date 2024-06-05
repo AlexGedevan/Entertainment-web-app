@@ -27,6 +27,12 @@ const StyledSignUp = styled.div`
   gap: 5.84rem;
   margin-top: 4.8rem;
   width: 32.7rem;
+
+  & > img {
+    width: 3.2rem;
+    height: 2.5rem;
+  }
+
   @media screen and (min-width: 768px) {
     gap: 7.24rem;
   }
