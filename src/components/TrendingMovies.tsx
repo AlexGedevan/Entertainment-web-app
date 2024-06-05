@@ -5,13 +5,19 @@ import { useMovies } from "../contexts/useMovies";
 
 export default function TrendingMovies() {
   const { movies, setMovies } = useMovies();
+  const trendingMovies = movies.filter((movie) => movie.isTrending);
   return (
     <StyledTrendingMovies>
-      {movies.map((movie: IMovies) => (
+      {trendingMovies.map((movie: IMovies) => (
         <TrendingMovieItem movie={movie} />
       ))}
     </StyledTrendingMovies>
   );
 }
 
-const StyledTrendingMovies = styled.div``;
+const StyledTrendingMovies = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+`;
