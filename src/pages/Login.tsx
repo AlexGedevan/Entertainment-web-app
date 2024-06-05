@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import logo from "/assets/logo.svg";
 import { Link } from "react-router-dom";
+import ReusableLogo from "../UI/ReusableLogo";
 export default function Login() {
   return (
     <StyledLogin>
       <img src={logo} />
+      {/* <ReusableLogo width={32} height={25} /> */}
       <LoginForm>
         <h1>Login</h1>
         <input type="text" placeholder="Email address" />
@@ -25,6 +27,10 @@ const StyledLogin = styled.div`
   align-items: center;
   gap: 5.84rem;
   margin-top: 4.8rem;
+  & > img {
+    width: 3.2rem;
+    height: 2.5rem;
+  }
   @media screen and (min-width: 768px) {
     gap: 7.24rem;
   }
