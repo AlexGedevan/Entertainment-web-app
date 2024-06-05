@@ -25,14 +25,18 @@ const StyledLogin = styled.div`
   align-items: center;
   gap: 5.84rem;
   margin-top: 4.8rem;
-  width: 32.7rem;
+  @media screen and (min-width: 768px) {
+    gap: 7.24rem;
+  }
 `;
 
 const LoginForm = styled.div`
+  width: 32.7rem;
   background-color: #161d2f;
   display: flex;
   flex-direction: column;
   padding: 2.4rem 2.4rem 3.2rem 2.4rem;
+  border-radius: 1rem;
 
   & > h1 {
     font-size: 3.2rem;
@@ -64,6 +68,10 @@ const LoginForm = styled.div`
     border: none;
     outline: none;
     margin-bottom: 2.4rem;
+  }
+  @media screen and (min-width: 768px) {
+    width: 40rem;
+    padding: 3.2rem;
   }
 `;
 
