@@ -34,7 +34,8 @@ export default function Home() {
 }
 
 const StyledHome = styled.div`
-  width: 37.5rem;
+  width: 100vw;
+  max-width: 50rem;
 `;
 
 const HomeHeader = styled.div`
