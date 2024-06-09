@@ -7,7 +7,8 @@ import AppLayout from "./AppLayout";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import { GlobalStyles } from "./Global";
-import Home from "./pages/Home";
+import Home from "./pages/HomeTrending";
+import HomeTrending from "./pages/HomeTrending";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -17,7 +18,12 @@ export default function App() {
     },
     {
       element: <AppLayout />,
-      children: [],
+      children: [
+        {
+          path: "/home/trending",
+          element: <HomeTrending />,
+        },
+      ],
     },
     {
       path: "/login",
@@ -26,10 +32,6 @@ export default function App() {
     {
       path: "/signUp",
       element: <SignUp />,
-    },
-    {
-      path: "/home",
-      element: <Home />,
     },
   ]);
 
