@@ -9,7 +9,7 @@ export default function TrendingMovies() {
   return (
     <StyledTrendingMovies>
       {trendingMovies.map((movie: IMovies) => (
-        <TrendingMovieItem movie={movie} />
+        <TrendingMovieItem key={movie.title} movie={movie} />
       ))}
     </StyledTrendingMovies>
   );

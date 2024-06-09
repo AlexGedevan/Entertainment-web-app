@@ -6,6 +6,7 @@ export default function Login() {
   return (
     <StyledLogin>
       <img src={logo} />
+
       {/* <ReusableLogo width={32} height={25} /> */}
       <LoginForm>
         <h1>Login</h1>

@@ -6,9 +6,11 @@ interface ITrendingMovieItem {
 }
 
 export default function TrendingMovieItem({ movie }: ITrendingMovieItem) {
+  console.log(movie.thumbnail?.trending?.small);
   return (
     <StyledTrendingMovieItem movie={movie}>
-      <img src={movie.thumbnail?.trending?.small} />
+      {/* <img src="/assets/thumbnails/beyond-earth/trending/small.jpg" /> */}
+      <img src={movie.thumbnail?.trending?.small?.slice(1)} alt="thumbnail" />
       <BookmarkDiv>
         <img src={bookmarkIcon} alt="bookmark" />
       </BookmarkDiv>
