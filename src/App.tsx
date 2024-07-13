@@ -7,8 +7,7 @@ import AppLayout from "./AppLayout";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import { GlobalStyles } from "./Global";
-import Home from "./pages/HomeTrending";
-import HomeTrending from "./pages/HomeTrending";
+import Home from "./pages/Home";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -20,8 +19,8 @@ export default function App() {
       element: <AppLayout />,
       children: [
         {
-          path: "/home/trending",
-          element: <HomeTrending />,
+          path: "/home",
+          element: <Home />,
         },
       ],
     },
