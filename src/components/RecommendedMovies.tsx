@@ -3,14 +3,14 @@ import { useMovies } from "../contexts/useMovies";
 import RecommendedMovieItem from "./RecommendedMovieItem";
 
 export default function RecommendedMovies() {
-  const { movies } = useMovies();
-  const recommendedMovies = movies.filter(
-    (movie) => "thumbnail" in movie && !("trending" in movie.thumbnail)
-  );
+  const { movies, moviesByTabCategorie } = useMovies();
+  // const recommendedMovies = movies.filter(
+  //   (movie) => "thumbnail" in movie && !("trending" in movie.thumbnail)
+  // );
 
   return (
     <StyledRecommendedMovies>
-      {recommendedMovies.map((movie: IMovies) => (
+      {moviesByTabCategorie.map((movie: IMovies) => (
         <RecommendedMovieItem key={movie.title} movie={movie} />
       ))}
     </StyledRecommendedMovies>

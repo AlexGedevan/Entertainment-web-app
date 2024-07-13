@@ -7,7 +7,8 @@ import SearchedMovies from "../components/SearchedMovies";
 import NavMovies from "../components/NavMovies";
 
 export default function Home() {
-  const { search, tab } = useMovies();
+  const { tab, search, movies } = useMovies();
+
   return (
     <StyledHome>
       {!search && tab === "navHome" && (
@@ -16,15 +17,11 @@ export default function Home() {
             <h1>Trending</h1>
             <TrendingMovies />
           </TrendingDiv>
-          <RecommendedForYou />
         </>
       )}
+      {!search && <RecommendedForYou />}
+
       {search && <SearchedMovies />}
-      {!search && tab === "navMovies" && (
-        <>
-          <NavMovies />
-        </>
-      )}
     </StyledHome>
   );
 }

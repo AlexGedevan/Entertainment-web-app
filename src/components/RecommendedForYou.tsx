@@ -1,10 +1,22 @@
 import styled from "styled-components";
 import RecommendedMovies from "./RecommendedMovies";
+import { useMovies } from "../contexts/useMovies";
 
 export default function RecommendedForYou() {
+  const { tab } = useMovies();
+  let header = "";
+  if (tab === "navHome") {
+    header = "Recommended for you";
+  } else if (tab === "navMovies") {
+    header = "Movies";
+  } else if (tab === "navTVseries") {
+    header = "TV Series";
+  } else if (tab === "navbookmark") {
+    header = "Bookmarked Movies";
+  }
   return (
     <StyledRecommendedForYou>
-      <h1>Recommended for you</h1>
+      <h1>{`${header}`}</h1>
       <RecommendedMovies />
     </StyledRecommendedForYou>
   );
