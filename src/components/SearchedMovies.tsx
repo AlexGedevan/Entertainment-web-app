@@ -8,11 +8,14 @@ export default function SearchedMovies() {
   const searchedMovies = movies.filter((movie) =>
     movie.title?.toLowerCase().includes(search.toLowerCase())
   );
+  const searchedMoviesLength = searchedMovies.length;
   console.log(searchedMovies, movies, search);
 
   return (
     <StyledSearchedMovies>
-      <h1>Found 2 results for 'Earth'</h1>
+      <h1>
+        Found {searchedMoviesLength} results for '{search}'
+      </h1>
       <SearchedMoviesDiv>
         {searchedMovies.map((movie) => (
           <SearchedMovieItem movie={movie} />
